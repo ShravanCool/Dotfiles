@@ -1,0 +1,26 @@
+function! myspacevim#before() abort
+set wrap
+" toggle relative number
+nnoremap <C-n> :set rnu!<CR>
+" set auto-indent and smart-indent
+set autoindent
+"set smartindent
+" backspace over anything
+set backspace=indent,eol,start
+
+"case-insensitive search
+set ignorecase
+set smartcase
+"enable searching as you type and highlight it
+set incsearch
+set hls
+
+"show lines above and below cursor(whenever possible)
+set scroll=5
+"use 4 spaces instead of tabs during formatting
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+endfunction

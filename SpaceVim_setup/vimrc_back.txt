@@ -1,0 +1,42 @@
+" vimrc_back
+" Comments in Vimscript start with a `"`.
+
+" If you open this file in Vim, it'll be syntax highlighted for you.
+
+" Vim is based on Vi. Setting `nocompatible` switches from the default
+" Vi-compatibility mode and enables useful Vim functionality. This
+" configuration option turns out not to be necessary for the file named
+" '~/.vimrc', because Vim automatically enters nocompatible mode if that file
+" is present. But we're including it here just in case this config file is
+" loaded some other way (e.g. saved as `foo`, and then Vim started with
+" `vim -u foo`).
+set nocompatible
+
+"Plugins list
+call plug#begin('~/.vim/plugged')
+Plug 'jiangmiao/auto-pairs' "auto-complete brackets 
+"Plug 'altercation/vim-colors-solarized' "color scheme
+Plug 'morhetz/gruvbox' "gruv-box
+Plug 'valloric/youcompleteme', {'do': './install.py --clang-completer --system-libclang' } "auto-complete code
+Plug 'flazz/vim-colorschemes' "color scheme all
+Plug 'othree/html5.vim' "HTML syntax and indent
+Plug 'scrooloose/nerdtree' "NerdTree
+
+" VIM enhancements
+Plug 'ciaranm/securemodelines'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'justinmk/vim-sneak'
+
+" GUI enhancements
+Plug 'itchyny/lightline.vim'
+Plug 'machakann/vim-highlightedyank'
+Plug 'andymass/vim-matchup'
+
+" " Code completion
+" if has('nvim')
+"     Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+" else
+"     Plug 'Shougo/deoplete.nvim'
+"     Plug 'roxma/nvim-yarp'
+"     Plug 'roxma/vim-hug-neovim-rpc'
+" endif
